@@ -1,8 +1,18 @@
+#include "main.h"
 #include <stdio.h>
 
-int main(void) {
-  char s[] = "hello";
-  int len = _strlen(s);
-  printf("The length of the string '%s' is %d.\n", s, len);
-  return 0;
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+    int len;
+
+    str = "My first strlen!";
+    len = _strlen(str);
+    printf("%d\n", len);
+    return (0);
 }
