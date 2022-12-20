@@ -1,5 +1,12 @@
-def print_reverse(s):
-  reversed_string = ""
-  for i in range(len(s)-1, -1, -1):
-    reversed_string += s[i]
-  print(reversed_string)
+#include <stdio.h>
+#include <string.h>
+
+void print_rev(char *s)
+{
+    int len = strlen(s);
+    for (int i = len - 1; i >= 0; i--)
+    {
+        putchar(s[i]);
+    }
+    putchar('\n');
+}
