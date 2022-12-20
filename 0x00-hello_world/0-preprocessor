@@ -1,2 +1,2 @@
 #!/bin/bash
-cpp $CFILE > cpp_output.c
+gcc -E $CFILE -o c
