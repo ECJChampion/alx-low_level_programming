@@ -1,12 +1,5 @@
-void print_rev(char *s) {
-  // Find the length of the string
-  int len = strlen(s);
-
-  // Print the string in reverse
-  for (int i = len - 1; i >= 0; i--) {
-    putchar(s[i]);
-  }
-
-  // Print a new line
-  putchar('\n');
-}
+def print_reverse(s):
+  reversed_string = ""
+  for i in range(len(s)-1, -1, -1):
+    reversed_string += s[i]
+  print(reversed_string)
