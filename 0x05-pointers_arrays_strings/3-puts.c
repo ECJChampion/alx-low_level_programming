@@ -1,7 +1,11 @@
 #include <stdio.h>
 
-int main(void) {
-    char *string = "Hello, World!";
-    printf("%s\n", string);
-    return 0;
+void _puts(char *str) {
+  printf("%s\n", str);
+}
+
+int main() {
+  char *str = "Hello, World!";
+  _puts(str);
+  return 0;
 }
