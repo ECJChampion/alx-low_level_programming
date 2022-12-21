@@ -1,2 +1,2 @@
 #!/bin/bash
-./compile_c.sh main.c
+gcc -c $CFILE
