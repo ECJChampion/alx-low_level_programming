@@ -1,3 +1,10 @@
-#!/bin/bash
-echo '#include <stdio.h> int main() { puts("Programming is like building a multilingual puzzle"); return 0; }' > program.c && gcc -o program program.c && ./program; rm program.c program
-
+#include <stdio.h>
+/**
+ *main - A program that prints out a text to the console
+ *Return: return an integer
+*/
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
+}

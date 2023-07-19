@@ -1,3 +1,18 @@
-#!/bin/bash
-echo -e '#include <stdio.h>\nint main() { printf("char: %zu\nshort: %zu\nint: %zu\nlong: %zu\nlong long: %zu\nfloat: %zu\ndouble: %zu\n", sizeof(char), sizeof(short), sizeof(int), sizeof(long), sizeof(long long), sizeof(float), sizeof(double)); return 0; }' > tmp.c && gcc tmp.c -o tmp && ./tmp && rm tmp.c tmp
+#include <stdio.h>
+/**
+ * main - size of evaluates the size of a variable
+ * Return: 0
+ */
+int main(void)
+{
+	int intType;
+	float floatType;
+	long int longType;
+	long long int doubleType;
+	char charType;
 
+	printf("Size of a char: %lu byte(s)\n", sizeof(charType));
+	printf("Size of an int: %lu byte(s)\n", sizeof(intType));
+	printf("Size of a long int: %lu byte(s)\n", sizeof(longType));
+	printf("Size of a long long int: %lu byte(s)\n", sizeof(doubleType));
+	printf("Size of a float: %lu by
