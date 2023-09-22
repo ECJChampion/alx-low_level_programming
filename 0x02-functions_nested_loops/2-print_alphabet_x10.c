@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * print_alphabet_x10 - prints alphabet as many as 10 times
+ *
+ * Return: always 0
+ */
 void print_alphabet_x10(void)
 {
     char letter;
@@ -12,8 +16,7 @@ void print_alphabet_x10(void)
             _putchar(letter);
         }
         repeat--;
+	_putchar('\n');
     }
-
-    _putchar('\n');
 }
 
