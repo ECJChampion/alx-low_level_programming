@@ -1,29 +1,38 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
- * print_diagsums - a function that prints the sum of the two diagonals
+ * set_string - a function that sets the value of a pointer to a char
  * @a: pointer to a matrix of integer
  * @size: size of an the square matrix
  *
  * Return: return the sum of the digonal matrix
  */
-void print_diagsums(int *a, int size)
-{
-	int i;
-	int mat1 = 0;
-	int mat2 = 0;
+void set_string(char **s, char *to) {
+    // Check if **s is already allocated memory
+    if (*s != NULL) {
+        free(*s); // Free the old memory to prevent memory leaks
+        *s = NULL; // Set the pointer to NULL after freeing
+    }
 
-	for (i = 0; i < size; i++)
-	{
-		mat1 = mat1 + a[i];
-		a = a + size;
-	}
-	a = a - size;
-
-	for (i = 0; i < size; i++)
-	{
-		mat2 = mat2 + a[i];
-		a = a - size;
-	}
-	printf("%d, %d\n", mat1, mat2);
+    // Allocate memory for **s and copy the content from *to
+    *s = (char *)malloc(strlen(to) + 1); // +1 for the null terminator
+    if (*s != NULL) {
+        strcpy(*s, to);
+    }
 }
+
+int main() {
+    char *s1 = NULL;
+    char *s2 = "Hello, World!";
+
+    set_string(&s1, s2);
+
+    if (s1 != NULL) {
+        printf("s1: %s\n", s1);
+        free(s1); // Don't forget to free the allocated memory when you're done
+    }
+
+    return 0;
+}
+
