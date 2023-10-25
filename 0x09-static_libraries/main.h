@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stddef.h>
 /**
  * main.h - a file that contains all the prototype
  */
