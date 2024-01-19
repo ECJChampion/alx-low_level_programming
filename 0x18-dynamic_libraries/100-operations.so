@@ -1,0 +1,13 @@
+# main.py
+
+from ctypes import CDLL
+
+# Load the dynamic library
+mylib = CDLL('./mylib.so')  # Update the path if necessary
+
+# Call the 'add' function from the library
+result = mylib.add(5, 7)
+
+# Print the result
+print("Result of add(5, 7):", result)
+
